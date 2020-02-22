@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "62289b7c-1e76-4afa-b122-ab5a9ba4b102",
+		"name": "plans",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Question",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/questions/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Solution",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"requiredFeatures\" : [\"email\",\"voice\",\"admin\"],\n \"availablePlans\":[\n \t{\n \t\t\"name\":\"PLAN1\",\n \t\t\"price\":100,\n \t\t\"features\":[\"voice\",\"email\"]\n \t},\n \t \t{\n \t\t\"name\":\"PLAN2\",\n \t\t\"price\":150,\n \t\t\"features\":[\"email\",\"database\",\"admin\"]\n \t},\n \t \t{\n \t\t\"name\":\"PLAN3\",\n \t\t\"price\":125,\n \t\t\"features\":[\"voice\",\"admin\"]\n \t},\n \t \t{\n \t\t\"name\":\"PLAN4\",\n \t\t\"price\":135,\n \t\t\"features\":[\"voice\",\"email\"]\n \t}\n ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/questions/1/solution",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions",
+						"1",
+						"solution"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
