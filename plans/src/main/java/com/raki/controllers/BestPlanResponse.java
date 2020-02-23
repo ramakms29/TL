@@ -1,4 +1,4 @@
-package com.raki;
+package com.raki.controllers;
 
 import java.util.HashSet;
 import java.util.Set;
